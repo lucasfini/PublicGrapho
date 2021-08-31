@@ -1,0 +1,31 @@
+{
+  "name": "project5daytrack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "bootstrap-select": "^1.13.18",
+    "chart.js": "^2.9.4",
+    "chartjs-plugin-style": "^0.5.0",
+    "flatted": "^3.2.2",
+    "jquery-simplecolorpicker": "^0.3.1",
+    "js-cookie": "^2.2.1",
+    "sass": "^1.32.12",
+    "sortablejs": "^1.13.0",
+    "spectrum-colorpicker2": "^2.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasfini/project5daytrack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasfini/project5daytrack/issues"
+  },
+  "homepage": "https://github.com/lucasfini/project5daytrack#readme"
+}

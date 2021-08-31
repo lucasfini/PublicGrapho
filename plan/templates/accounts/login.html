@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% load static %} {%block body%}
+
+<div class="loginBackground ">
+  <div class="tint  centerBox">
+  
+   <!-- <div class="row  " >
+     <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-12 col-xxl-4 offset-xxl-5 " > -->
+        <div class="card">
+          <form method="post" class="box ">
+            {%csrf_token%}
+            <h1>
+              <a href="{%url 'project5daytrack:login' %}" class="forgotPass"
+                >GraphiT</a
+              >
+            </h1>
+            <p class="text-muted">Please enter your username and password!</p>
+            <input
+              type="input"
+              class="form-control"
+              name="username"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <a class="forgot text-muted" href="/account/reset-password/"
+              >Forgot password?</a
+            >
+            <button type="submit">Login</button>
+            <a class="forgot text-muted" href="/account/register/"
+              >Don't have an account? Register!</a
+            >
+          </form>
+        </div>
+    <!--  </div>
+    </div> -->
+  </div>
+</div>
+
+{%endblock%}

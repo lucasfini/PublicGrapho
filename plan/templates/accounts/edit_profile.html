@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {%block head%}
+<title>Edit Profile</title>
+{%endblock%} {%block body%}
+
+<div class="centerBox">
+  
+  <form method="POST">
+      {%csrf_token%} 
+      <a  class="forgotPasswordTitle"
+                >Edit Profile</a
+              >
+              <br></br>
+
+
+       <input
+              type="input"
+              class="form-control"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="input"
+              class="form-control"
+              name="first_name"
+              id="first_name"
+              placeholder="First Name"
+             required
+            />
+
+             <input
+              type="input"
+              class="form-control"
+              name="last_name"
+              id="lat_name"
+              placeholder="Last Name"
+              required
+            />
+   
+     
+<br></br>
+ <button class="submitpass "type="submit">Submit</button>
+    </div>
+    
+  </form>
+  {%endblock%}
+</div>

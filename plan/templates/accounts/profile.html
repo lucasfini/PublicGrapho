@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {%block head%}
+<title>Profile</title>
+{%endblock%} {%block body%}
+
+<div class="centerBox">
+  <div class="boxpassword">
+    <a class="forgotPasswordTitle">Profile</a>
+    <ul class="list-group list-group-flush  ">
+      <li class=" profileItem list-group-item badge bg-dark">Username: {{user}}</li>
+      <li class=" profileItem list-group-item badge bg-dark">First name: {{user.first_name}}</li>
+      <li class="profileItem list-group-item badge bg-dark">Last name: {{user.last_name}}</li>
+      <li class=" profileItem list-group-item badge bg-dark">Email: {{user.email}}</li>
+    </ul>
+  </div>
+</div>
+{%endblock%}

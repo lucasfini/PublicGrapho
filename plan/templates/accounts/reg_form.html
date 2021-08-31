@@ -1,0 +1,79 @@
+{% extends 'base.html'%} {% load static %} {%block body %}
+<br />
+<div class="registerBackground">
+  <div class="centerBox tint">
+        <div class="card"  >
+          <form method="post" class="box">
+            {%csrf_token%}
+            <h1>
+              <a  class="forgotPass"
+                >Register</a
+              >
+            </h1>
+            <p class="text-muted">Please enter the following information below.</p>
+            <input
+              type="input"
+              class="form-control"
+              name="username"
+              id="inputEmail"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="input"
+              class="form-control"
+              name="first_name"
+              id="inputPass"
+              placeholder="First Name"
+            
+            />
+<input
+              type="input"
+              class="form-control"
+              name="last_name"
+              id="inputPass"
+              placeholder="Last Name"
+             
+            />
+            <input
+              type="input"
+              class="form-control"
+              name="email"
+              id="inputPass"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              class="form-control"
+              name="password1"
+              id="inputPass"
+              placeholder="Password"
+              required
+            />
+            <div class="center">
+            <p class="passText" > Your password can't be too similar to other personal information</p>
+            <p class="passText" > Your password must contain at least 8 characters</p>
+            <p class="passText" > Your password can't be a commonly used password</p>
+            <p class="passText" > Your password be entirely numeric</p>
+            </div>
+            <input
+              type="password"
+              class="form-control"
+              name="password2"
+              id="inputPass"
+              placeholder="Password Confirm"
+              required
+            />
+           
+            <button type="submit">Register</button>
+            <a class="forgot text-muted" href="/account/"
+              >Have an account? LogiN!</a
+            >
+          </form>
+        </div>
+  </div>
+</div>
+{%endblock%}
+
+

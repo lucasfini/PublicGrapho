@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+
+{%block body%}
+<div class="logoutBackground">
+  <div class=" tint centerBox">
+   
+    
+        <div class="card">
+          <form method="post" class="box">
+            {%csrf_token%}
+            <h1>
+              <a href="{%url 'project5daytrack:login' %}" class="forgotPass"
+                >GraphiT</a
+              >
+            </h1>
+            <p class="text-muted">You have been logged out!</p>
+          
+            <a class="forgot text-muted" href="/account/login/"
+              >Back to logiN?</a
+            >
+         
+          </form>
+        </div>
+    
+  </div>
+</div>
+{%endblock%}

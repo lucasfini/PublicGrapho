@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+
+{%block head%}
+<title>Home</title>
+
+{%endblock%} {%block body%}
+
+
+
+<div class='container-fluid'>
+    <div class='row rightMenuButton'>
+        <!-- Button trigger modal -->
+        <div class =" col-4 offset-4 col-sm-3 offset-sm-6 col-md-3 offset-md-6 col-lg-3 offset-lg-6 col-xl-2 offset-xl-8 col-xxl-2 offset-xxl-8">
+        <button type="button" class="  topButton w-100" data-bs-toggle="modal" data-bs-target="#MenuModal">
+            Select Chart
+        </button>
+        </div>
+        <div class=" col-4 col-sm-3 col-md-3 col-lg-3 col-xl-2 col-xxl-2 ">
+            <button class=" topButton w-100" type="button" data-bs-toggle="collapse" onclick="getGraphs()" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Open Chart
+            </button>
+        </div>
+    </div>
+
+<div class="row ">
+<div class=' position col-4 offset-5 col-sm-5 offset-sm-7 col-md-4 offset-md-8 col-lg-5 offset-lg-8 col-xl-3 offset-xl-9 col-xxl-2 offset-xxl-10'>
+<div class="collapse openChart " id="collapseExample">
+  <div class="card card-body ">
+   <div class="list-group list-group-flush" id="chartsList">
+
+
+
+   </div>
+  </div>
+  </div>
+</div>
+</div>
+
+    <div class='row  behindPos justify-content-center' id='defaultCard'>
+
+
+
+
+    </div>
+</div>
+
+<div class="modal fade deleteModal" id="deleteModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content  deleteModal center">
+      <div class="modal-header ">
+        <h5 class="modal-title">Are you sure you want to delete | <span id="graphName">  </span> | </h5>
+      </div>
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" onclick="deleteChart()" class="btn btn-danger">Delete Graph</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+
+<div class="modal fade deleteModal" id="MenuModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content modelTransparency">
+            <div class="modal-header headerMenuStyle">
+                <h5 class="modal-title" id="exampleModalLabel">Choose a Option</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bodyMenuStyle">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-6 w-50 buttonMenuStyle">
+                            <div class='card w-100 cardMenuStyle'>
+                                <img class="card-img-top" src="../../static/images/bargr.png"></img>
+                                <div class="card-text" style="text-align: center;">Bar Charts</div>
+                                <a id="bargraph" class='stretched-link' onclick="chart()" style="cursor: pointer;"></a>
+                              
+                            </div>
+                        </div>
+                        <div class="col-6 w-50 buttonMenuStyle">
+                            <div class='card w-100 cardMenuStyle'>
+                                <img class="card-img-top" src="../../static/images/linechr.png"></img>
+                                <div class="card-text" style="text-align: center;">Line Chart</div>
+                                <a id="bargraph" class='stretched-link' onclick="lineChart()" style="cursor: pointer;"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center">
+                        <div class="col-6 w-50 buttonMenuStyle">
+                            <div class='card w-100 cardMenuStyle'>
+                                <div class='card cardMenuStyle'>
+                                    <img class="card-img-top" src="../../static/images/radar.png"></img>
+                                    <div class="card-text" style="text-align: center;">Radar Chart</div>
+                                    <a id="bargraph" class='stretched-link' onclick="radarChart()" style="cursor: pointer;"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6  w-50 buttonMenuStyle">
+                            <div class='card w-100 cardMenuStyle'>
+                                <div class='card cardMenuStyle'>
+                                    <img class="card-img-top" src="../../static/images/donut.png"></img>
+                                    <div class="card-text" style="text-align: center;">Donut Chart</div>
+                                    <a id="bargraph" class='stretched-link' onclick="doughnutChart()" style="cursor: pointer;"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <div class="modal-footer footerBarStyle">
+               <div class="col" style="padding-right:0;">
+                  <button type="button" style="float:right;  " class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+<div id='configMenu'>
+
+
+
+
+
+
+</div>
+
+
+
+<div id="bottommsg">Chart Already Opened :)</div>
+<div id="titlemsg">Please add a title :)</div>
+
+
+
+</div>
+</div>
+
+
+<script>
+
+
+
+    $('.typeBox').click(function () {
+        $('.typeBox').not(this).prop('checked', false);
+    });
+
+
+</script>
+
+
+{%endblock%}
